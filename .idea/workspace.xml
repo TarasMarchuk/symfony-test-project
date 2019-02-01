@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5386a784-4f76-405a-9aa4-a476be4130e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/deploy/deploy.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/deploy/pre_deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,15 +20,15 @@
     <session id="-1243437936">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.7" value="5" />
           <entry key="project.open.time.8" value="12" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,6 +44,7 @@
           <entry key="lock" value="1" />
           <entry key="md" value="1" />
           <entry key="php" value="101" />
+          <entry key="sh" value="2" />
           <entry key="sql" value="1" />
           <entry key="test" value="1" />
           <entry key="ts" value="2" />
@@ -55,13 +58,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="4" />
+          <entry key="Bash" value="1" />
           <entry key="CSS" value="4" />
           <entry key="HTML" value="2" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="9" />
           <entry key="Markdown" value="1" />
           <entry key="PHP" value="101" />
-          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="PLAIN_TEXT" value="9" />
           <entry key="SQL" value="1" />
           <entry key="SmartyConfig" value="1" />
           <entry key="Twig" value="30" />
@@ -83,21 +87,25 @@
           <entry key="env" value="48" />
           <entry key="js" value="178" />
           <entry key="php" value="10929" />
+          <entry key="sh" value="592" />
           <entry key="twig" value="3806" />
+          <entry key="txt" value="66" />
           <entry key="yaml" value="1509" />
-          <entry key="yml" value="740" />
+          <entry key="yml" value="1613" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="48" />
+          <entry key="Bash" value="592" />
           <entry key="CSS" value="76" />
           <entry key="JavaScript" value="178" />
           <entry key="PHP" value="10922" />
+          <entry key="PLAIN_TEXT" value="66" />
           <entry key="SQL" value="7" />
           <entry key="SmartyConfig" value="11" />
           <entry key="Twig" value="3806" />
-          <entry key="YAML" value="2249" />
+          <entry key="YAML" value="3122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -109,27 +117,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/services.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" selection-start-line="60" selection-end-line="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Event/LocaleSubscriber.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding>
-                <element signature="e#110#173#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
           <provider selected="true" editor-type-id="text-editor" />
@@ -163,7 +150,7 @@
         <entry file="file://$USER_HOME$/Downloads/symfony_docs/micro-post.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="78" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="78" />
+              <caret line="3" column="78" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -171,8 +158,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="870">
+              <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/deploy/pre_deploy.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/deploy/deploy.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -320,13 +325,12 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/security/login.html.twig" />
-        <option value="$PROJECT_DIR$/templates/register/register.html.twig" />
         <option value="$PROJECT_DIR$/src/Security/MicroPostVoter.php" />
         <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/templates/micro-post/raw-post.html.twig" />
@@ -375,6 +379,8 @@
         <option value="$PROJECT_DIR$/tests/Security/TokenGeneratorTest.php" />
         <option value="$PROJECT_DIR$/tests/Mailer/MailerTest.php" />
         <option value="$USER_HOME$/Downloads/symfony_docs/micro-post.conf" />
+        <option value="$PROJECT_DIR$/bin/deploy/pre_deploy.sh" />
+        <option value="$PROJECT_DIR$/bin/deploy/deploy.sh" />
         <option value="$PROJECT_DIR$/.circleci/config.yml" />
       </list>
     </option>
@@ -506,12 +512,30 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>BashSupport</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>BashAddShebang</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -529,6 +553,17 @@
               <item name="symfony-01" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="symfony-01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="symfony-01" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="symfony-01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="symfony-01" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="deploy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="symfony-01" type="b2602c69:ProjectViewProjectNode" />
@@ -653,7 +688,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -663,7 +697,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -712,19 +746,43 @@
       <workItem from="1548884171116" duration="3017000" />
       <workItem from="1548894456867" duration="5291000" />
       <workItem from="1548987861054" duration="3357000" />
-      <workItem from="1549035393824" duration="1891000" />
+      <workItem from="1549035393824" duration="6836000" />
+      <workItem from="1549042553812" duration="123000" />
+      <workItem from="1549042693402" duration="1281000" />
     </task>
+    <task id="LOCAL-00001" summary="fix CircleCi config">
+      <created>1549037757908</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1549037757909</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix CircleCi config php zip extension problem">
+      <created>1549038412099</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1549038412099</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix CircleCi config adding tests running">
+      <created>1549039178894</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1549039178894</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207990000" />
+    <option name="totallyTimeSpent" value="214339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972973" visible="true" weight="0.33370227" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5027027" side_tool="true" visible="true" weight="0.33370227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49405405" visible="true" weight="0.34144992" />
+      <window_info id="Structure" order="1" sideWeight="0.5059459" side_tool="true" visible="true" weight="0.34144992" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -737,7 +795,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32972974" />
       <window_info anchor="bottom" id="TypeScript" order="12" visible="true" weight="0.32972974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -772,21 +830,13 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix CircleCi config" />
+    <MESSAGE value="fix CircleCi config php zip extension problem" />
+    <MESSAGE value="fix CircleCi config adding tests running" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix CircleCi config adding tests running" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="43" column="83" selection-start-line="43" selection-start-column="83" selection-end-line="43" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/security/confirmation.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1010,6 +1060,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/symfony_docs/micro-post.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="78" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Mailer/Mailer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1110,17 +1167,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/symfony_docs/micro-post.conf">
+    <entry file="file://$PROJECT_DIR$/bin/deploy/pre_deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="78" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="78" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/deploy/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="870">
+          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
         </state>
       </provider>
     </entry>
