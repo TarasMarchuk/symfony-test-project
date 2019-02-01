@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     working_directory: ~/micropost
-    doker:
+    docker:
       - image: circleci/php:7.2.4-apache-stretch-node-browsers
         environment:
           APP_ENV: test
