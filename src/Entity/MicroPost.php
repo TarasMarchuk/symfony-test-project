@@ -69,7 +69,7 @@ class MicroPost
     }
 
     /**
-     * @param mixed $text
+     * @param string $text
      */
     public function setText($text): void
     {
