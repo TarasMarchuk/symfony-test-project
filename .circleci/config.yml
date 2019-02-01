@@ -68,7 +68,7 @@ jobs:
           command: rsync -vzcrSLhp --exclude '.env' --delete ~/micropost/ $DROPLET_USER@$DROPLET_IP:/var/www/micropost_current
       - run:
           name: Post-deploy
-          command: ssh -T $DROPLET_USER:$DROPLET_IP < bin/deploy/deploy.sh
+          command: ssh -T $DROPLET_USER@$DROPLET_IP < bin/deploy/deploy.sh
 workflows:
   version: 2
   build-and-deploy:
